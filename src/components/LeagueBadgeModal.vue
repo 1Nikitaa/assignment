@@ -5,7 +5,7 @@
         <svg width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="24" fill="#fff" fill-opacity=".3"/><path d="M33 16.813 31.187 15 24 22.187 16.813 15 15 16.813 22.187 24 15 31.187 16.813 33 24 25.813 31.187 33 33 31.187 25.813 24 33 16.813Z" fill="#fff"/></svg>
       </button>
       <div :class="[
-        'bg-white p-4 sm:p-6 relative flex items-center justify-center w-[90vw] max-w-[400px] h-auto max-h-[90vh] rounded-lg',
+        'bg-white p-4 sm:p-6 relative flex items-center justify-center w-[90vw] max-w-[400px] h-[320px] sm:h-[400px] rounded-lg',
         'transition-all duration-300',
         show ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
       ]">
@@ -13,7 +13,7 @@
           v-if="badge && !imageError"
           :src="badge"
           alt="Season badge"
-          class="transition-opacity duration-500 opacity-0 max-w-full max-h-[60vh] object-contain rounded shadow-md border border-gray-100"
+          class="transition-opacity duration-500 opacity-0 w-full h-full object-contain rounded shadow-md border border-gray-100"
           @load="onImageLoad"
           @error="onImageError"
           :class="{ 'opacity-100': imageLoaded }"
@@ -27,7 +27,9 @@
           </svg>
           <span class="text-theme font-semibold text-base">No badge available</span>
         </div>
-        <ImageSkeleton v-else />
+        <div v-else class="w-full h-full flex items-center justify-center">
+          <ImageSkeleton />
+        </div>
       </div>
     </div>
   </div>
