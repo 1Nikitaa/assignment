@@ -2,8 +2,6 @@
 
 A responsive single-page application (SPA) built with Vue 3 and Vite. Browse, search, and filter sports leagues using data from TheSportsDB API.
 
----
-
 ## Features
 
 - Fast SPA with Vue 3 (Options API) and Vite
@@ -37,36 +35,6 @@ npm install
 npm run dev
 ```
 
-## Project Structure
-
-```
-src/
-	App.vue                # Root component
-	main.js                # App entry point
-	api/
-		leagues.service.js   # API + caching logic
-	cache/
-		cacheManager.js      # In-memory + localStorage cache
-	components/
-		EmptyState.vue       # Branded empty state
-		LeagueBadgeModal.vue # Modal popover for league badge
-		LeagueList.vue       # List of leagues
-		SearchBar.vue        # Search input
-		SkeletonLoader.vue   # List skeleton loader
-		ImageSkeleton.vue    # Image skeleton loader
-		SportFilter.vue      # Sport filter dropdown
-	i18n/
-		en.properties.js     # UI strings
-	styles/
-		base.scss            # Global styles
-	views/
-		HomeView.vue         # Main SPA view
-index.html
-vite.config.js
-tailwind.config.js
-postcss.config.js
-package.json
-```
 
 ## Accessibility & UX
 
@@ -85,8 +53,8 @@ package.json
 
 ## Theming & Customization
 
-- Primary theme color: `#e41827` (set in Tailwind and SCSS)
-- Font: [Barlow](https://fonts.google.com/specimen/Barlow), loaded via Google Fonts
+- Primary theme color: `#e41827`
+- Font: [Barlow] loaded via Google Fonts
 - Easily adjust theme in `tailwind.config.js` and `base.scss`
 
 ## Development Notes
@@ -109,3 +77,4 @@ package.json
 
 - Took reference from the Sporty official website for UI design.
 - Ensured the UI matches the look and feel of the Sporty website.
+- mobile-first responsive approach
